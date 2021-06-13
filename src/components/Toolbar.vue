@@ -1,18 +1,16 @@
 <template>
-  <div>
-    <v-app-bar color="deep-purple accent-4" dense dark>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
+  <div class="watchflix-toolbar">
+    <v-app-bar color="blue-grey lighten-1" height="85" elevation="0" dark>
       <v-toolbar-title>Watchflix</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
       <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
+        <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
       <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
+        <v-icon>mdi-format-list-checks</v-icon>
       </v-btn>
 
       <v-menu left bottom>
@@ -23,7 +21,7 @@
         </template>
 
         <v-list>
-          <v-list-item v-for="n in 5" :key="n" @click="() => {}">
+          <v-list-item v-for="n in 3" :key="n" @click="() => {}">
             <v-list-item-title>Option {{ n }}</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -37,3 +35,6 @@ export default {
   name: "Toolbar",
 };
 </script>
+
+<style lang="scss">
+</style>
