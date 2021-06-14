@@ -11,15 +11,24 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import Toolbar from "./components/Toolbar";
-import Search from "./components/Search";
 
 export default {
   name: "App",
 
   components: {
     Toolbar,
-    Search,
+  },
+  computed: {
+    ...mapGetters(["currentUser"]),
+  },
+  watch: {
+    currentUser(currentUser) {
+      if (currentUser) {
+        this.$router.push("/dashboard");
+      }
+    },
   },
 };
 </script>

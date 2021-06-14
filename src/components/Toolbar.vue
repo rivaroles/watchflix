@@ -1,33 +1,27 @@
 <template>
-  <div class="watchflix-toolbar">
-    <v-app-bar color="blue-grey lighten-1" height="85" elevation="0" dark>
-      <v-toolbar-title>Watchflix</v-toolbar-title>
+  <v-row justify="center" no-gutters>
+    <v-col md="12" class="watchflix-toolbar">
+      <v-app-bar color="blue-grey lighten-1" height="85" elevation="0" dark>
+        <v-toolbar-title class="watchflix-title">
+          <v-btn color="#ffffff" text to="/" class="button"> Watchflix </v-btn>
+        </v-toolbar-title>
 
-      <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
 
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
+        <v-btn icon>
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
 
-      <v-btn icon>
-        <v-icon>mdi-format-list-checks</v-icon>
-      </v-btn>
+        <v-btn icon>
+          <v-icon>mdi-format-list-checks</v-icon>
+        </v-btn>
 
-      <v-menu left bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn icon v-bind="attrs" v-on="on">
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </template>
-
-        <v-list>
-          <v-list-item v-for="n in 3" :key="n" @click="() => {}">
-            <v-list-item-title>Option {{ n }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </v-app-bar>
-  </div>
+        <v-btn icon>
+          <v-icon>mdi-account</v-icon>
+        </v-btn>
+      </v-app-bar>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -37,4 +31,9 @@ export default {
 </script>
 
 <style lang="scss">
+.watchflix-toolbar {
+  .watchflix-title {
+    font-family: "Ubuntu-Bold";
+  }
+}
 </style>
