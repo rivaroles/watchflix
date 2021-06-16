@@ -1,11 +1,21 @@
 <template>
-  <div>Olá, {{ userName }}</div>
+  <div>
+    Olá, {{ userName }}
+    <Search />
+  </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
+import Search from "../components/Search.vue";
+
 export default {
   name: "Dashboard",
+
+  components: {
+    Search,
+  },
+
   data() {
     return {
       userName: "",
