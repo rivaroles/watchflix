@@ -1,19 +1,21 @@
 <template>
-  <div>
+  <div class='welcome'>
     Olá, {{ userName }}
-    <Search />
+    <div class='search-box'>
+      <movie-search />
+    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import Search from "../components/Search.vue";
+import MovieSearch from "../components/MovieSearch.vue";
 
 export default {
   name: "Dashboard",
 
   components: {
-    Search,
+    MovieSearch,
   },
 
   data() {
@@ -33,3 +35,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+  .welcome {
+    font-family: "Ubuntu-Bold";
+    font-size: 20px;
+  }
+
+</style>

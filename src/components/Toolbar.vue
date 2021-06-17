@@ -5,20 +5,6 @@
         <v-toolbar-title class="watchflix-title">
           <v-btn color="#ffffff" text to="/" class="button"> Watchflix </v-btn>
         </v-toolbar-title>
-
-        <v-spacer></v-spacer>
-
-        <v-btn icon>
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn>
-
-        <v-btn icon>
-          <v-icon>mdi-format-list-checks</v-icon>
-        </v-btn>
-
-        <v-btn icon>
-          <v-icon>mdi-account</v-icon>
-        </v-btn>
       </v-app-bar>
     </v-col>
   </v-row>

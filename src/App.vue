@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <toolbar />
-    <search />
     <v-main>
       <v-container fluid fill-height>
         <router-view />
